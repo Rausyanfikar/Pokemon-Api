@@ -80,7 +80,6 @@ const HomePage = () => {
         </div>
 
         <div className="grid  grid-cols-1 md:grid-cols-4 lg:grid-cols-4 m-2 gap-3">
-          <div>{show ? userSelect : ''}</div>
           {pokemon.map((item, index) => (
             <CardPokemon key={index} name={item.name} url={index + 1} />
           ))}
