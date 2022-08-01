@@ -1,16 +1,17 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../App.css';
 import CardPokemon from '../components/CardPokemon';
-import { data } from 'autoprefixer';
 
 const HomePage = () => {
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(true);
   const [userSelect, setUserSelect] = useState('');
   const [show, setShow] = useState('false');
+  const navigate = useNavigate();
 
   // const navigate = useNavigate();
   useEffect(() => {
@@ -81,7 +82,7 @@ const HomePage = () => {
 
         <div className="grid  grid-cols-1 md:grid-cols-4 lg:grid-cols-4 m-2 gap-3">
           {pokemon.map((item, index) => (
-            <CardPokemon key={index} name={item.name} url={index + 1} />
+            <CardPokemon key={index} name={item.name} url={index + 1} onClickItem={() => navigate(`detail/${item.name}`)} />
           ))}
         </div>
       </Layout>

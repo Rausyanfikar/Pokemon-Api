@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CardPokemon = ({ name, url }) => {
+const CardPokemon = ({ name, url, onClickItem }) => {
   return (
     <div className="container grow p-7   flex flex-col bg-white max-w-sm mx-auto rounded-md  text-black border-2 shadow-lg border-black ">
-      <div className="cursor-pointer h-full flex flex-col justify-between ">
+      <div className="cursor-pointer h-full flex flex-col justify-between " onClick={onClickItem}>
         <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${url}.svg`} alt={name} width={300} height={350} />
         <div className="">
           <div className="text-center text-lg font-semibold  ">
