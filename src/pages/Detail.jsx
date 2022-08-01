@@ -43,7 +43,7 @@ const Detail = () => {
   } else {
     return (
       <Layout>
-        <CardDetail key={pokemon.id} name={pokemon.name} url={pokemon.id + 1} types={pokemon.types.map((tr) => tr.type.name)} ability={pokemon.abilities.map((tr) => tr.ability.name)} move={pokemon.moves.map((tr) => tr.move.name)} />
+        <CardDetail key={pokemon.id} name={pokemon.name} url={pokemon.id} types={pokemon.types.map((tr) => tr.type.name)} ability={pokemon.abilities.map((tr) => tr.ability.name)} move={pokemon.moves.map((tr) => tr.move.name)} />
       </Layout>
     );
   }
